@@ -13,14 +13,14 @@ class Environment {
     devPrint(__message, color: DevPrintColorEnum.black);
   }
 
-  // TODO: Edit environment according to the .env file
-  /// API base URL
 
   static late final String apiBaseUrl;
+  static late final String apiKey;
 
   static void _fromMap(Map<String, dynamic> map) {
     try {
       apiBaseUrl = map['API_BASE_URL'];
+      apiKey = map['API_KEY'];
     } catch (e) {
       devPrint('EnvironmentModel: $e', color: DevPrintColorEnum.red);
     }
@@ -29,6 +29,7 @@ class Environment {
   static String get __message => '''
 EnvironmentModel(
   apiBaseUrl: $apiBaseUrl,
+  apiKey: $apiKey,
 )
 ''';
 }

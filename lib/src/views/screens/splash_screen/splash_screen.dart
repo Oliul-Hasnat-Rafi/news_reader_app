@@ -11,7 +11,7 @@ import '../../../utils/dev_functions/dev_scaffold.dart';
 import '../../widgets/loading_bar.dart';
 import '../../widgets/text.dart';
 import '../authentication/authentication_wrapper_screen.dart';
-import '../dashboard/dashboard_wrapper_screen.dart';
+import '../dashboard/dashboard_screen.dart';
 
 part '../../../controllers/screen_controllers/splash_screen/controller.dart';
 

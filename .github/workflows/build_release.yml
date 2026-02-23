@@ -1,0 +1,64 @@
+name: "Build & Release"
+
+permissions:
+  contents: write   
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    name: Build APK & Release
+    runs-on: macos-latest  
+
+    steps:
+  
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+   
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          architecture: x64
+          cache: true
+
+
+      - name: Install dependencies
+        run: |
+          flutter clean
+          flutter pub get
+
+      - name: Build Release APK
+        run: flutter build apk --release
+        env:
+          GRADLE_USER_HOME: ${{ github.workspace }}/.gradle
+
+      - name: Create GitHub Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/release/*.apk"
+          tag: v1.0.${{ github.run_number }}
+          name: "Release v1.0.${{ github.run_number }}"
+          body: |
+            Automated Flutter Release
+            - Branch: ${{ github.ref_name }}
+            - Commit: ${{ github.sha }}
+            - Build: ${{ github.run_number }}
+          token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs
 
-part of '../../../views/screens/dashboard/dashboard_wrapper_screen.dart';
+part of '../../../views/screens/dashboard/dashboard_screen.dart';
 
 /// Dashboard screen controller for managing news list
 class DashboardController extends GetxController {

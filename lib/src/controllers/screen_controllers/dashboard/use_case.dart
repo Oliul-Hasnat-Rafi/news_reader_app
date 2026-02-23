@@ -1,4 +1,4 @@
-part of '../../../views/screens/dashboard/dashboard_wrapper_screen.dart';
+part of '../../../views/screens/dashboard/dashboard_screen.dart';
 
 /// Dashboard Use Case for handling business logic
 class _DashboardUseCase extends BaseUseCase {

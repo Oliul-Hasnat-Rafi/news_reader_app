@@ -24,7 +24,7 @@ import '../../widgets/size.dart';
 import '../../widgets/svg.dart';
 import '../../widgets/text.dart';
 import '../../widgets/toc_and_pp.dart';
-import '../dashboard/dashboard_wrapper_screen.dart';
+import '../dashboard/dashboard_screen.dart';
 
 part '../../../controllers/screen_controllers/authentication/controller.dart';
 part '../../../controllers/screen_controllers/authentication/repository.dart';

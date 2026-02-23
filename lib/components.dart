@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:personal_project/src/core/environment/environment.dart';
 
 //! ---------------------------------------------------------------- App Details
 /// App name
@@ -7,12 +8,15 @@ const String appName = 'News Reader App';
 
 /// App description
 const String appDescription =
-    '''This a Flutter task for bangladesh army''';
+    '''A news reader app built for Bangladesh Army''';
 /// App Terms and Conditions
 const String urlTOS = 'https://www.google.com';
 
 /// App Privacy Policy
 const String urlPP = 'https://www.google.com';
+
+/// api key for newsdata.io
+String get newsApiKey => Environment.apiKey;
 
 //! ------------------------------------------------------------------ Dimension
 /// Designed screen size

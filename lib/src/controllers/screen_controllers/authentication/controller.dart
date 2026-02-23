@@ -70,7 +70,7 @@ class _AuthenticationScreenController extends GetxController {
     final UserModel? user = authController.user.value;
     if (user == null) return;
 
-    Get.offAll(() => const DashboardWrapperScreen());
+    Get.offAll(() => const DashboardScreen());
   }
 
   Future<bool> googleSignIn() async {
