@@ -23,10 +23,10 @@ class _AuthenticationScreenController extends GetxController {
   }
 
   List<void Function()> get devFunctions => <void Function()>[
-        /// store email and password for quick login
+        /// store email and password for quick login (mock credentials)
         () {
-          emailC.text = 'rafi.dpl@gmail.com';
-          passwordC.text = 'Singup@1234';
+          emailC.text = 'test@news.com';
+          passwordC.text = 'Test@1234';
         },
       ];
 

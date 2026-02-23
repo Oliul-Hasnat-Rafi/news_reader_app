@@ -11,4 +11,6 @@ class AppAssets {
   static const String lock = 'lib/assets/svg/icons/lock_icon.svg';
   /// google icon
   static const String google = 'lib/assets/svg/icons/google_icon.svg';
+  /// NO data lottie animation
+  static const String noDataLottie = 'lib/assets/lottie/no_data.json';
 }

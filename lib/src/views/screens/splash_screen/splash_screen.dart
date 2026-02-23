@@ -9,7 +9,6 @@ import '../../../controllers/data_controllers/auth_controller.dart';
 import '../../../core/localization/app_translations.dart';
 import '../../../utils/dev_functions/dev_scaffold.dart';
 import '../../widgets/loading_bar.dart';
-import '../../widgets/svg.dart';
 import '../../widgets/text.dart';
 import '../authentication/authentication_wrapper_screen.dart';
 import '../dashboard/dashboard_wrapper_screen.dart';
